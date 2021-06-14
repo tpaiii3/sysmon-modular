@@ -3,8 +3,17 @@
 		<RuleGroup name="" groupRelation="or">
 			<FileCreate onmatch="include">
 				<TargetFilename condition="end with">.rft</TargetFilename>
+				<TargetFilename condition="end with">.xls</TargetFilename> <!--Legacy Office files are often used for attacks-->
+				<TargetFilename condition="end with">.ppt</TargetFilename> <!--Legacy Office files are often used for attacks-->
+				<TargetFilename condition="end with">.cmdline</TargetFilename> <!--Microsoft:dotNet: Executed by cvtres.exe-->
+				<TargetFilename name="T1176" condition="end with">.crx</TargetFilename> <!--Chrome extension-->
+				<TargetFilename condition="end with">.dmp</TargetFilename> <!--Process dumps [ (fr) http://blog.gentilkiwi.com/securite/mimikatz/minidump ] -->
 				<TargetFilename condition="end with">.jsp</TargetFilename>
 				<TargetFilename condition="end with">.jspx</TargetFilename>
+				<TargetFilename name="ProcessHostingdotNETCode" condition="end with">.exe.log</TargetFilename> <!-- [ https://github.com/bitsadmin/nopowershell ] | Credit: @SBousseaden [ https://twitter.com/SBousseaden/status/1137493597769687040 ]  -->
+				<TargetFilename condition="end with">.jar</TargetFilename> <!--Java applets-->
+				<TargetFilename condition="end with">.jnlp</TargetFilename> <!--Java applets-->
+				<TargetFilename condition="end with">.jse</TargetFilename> <!--Scripting [ Example: https://www.sophos.com/en-us/threat-center/threat-analyses/viruses-and-spyware/Mal~Phires-C/detailed-analysis.aspx ] -->
 				<TargetFilename condition="end with">.asp</TargetFilename>
 				<TargetFilename condition="end with">.aspx</TargetFilename>
 				<TargetFilename condition="end with">.php</TargetFilename>
