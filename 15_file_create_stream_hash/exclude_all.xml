@@ -1,8 +1,0 @@
-<Sysmon schemaversion="4.30">
-	<EventFiltering>
-		<RuleGroup name="" groupRelation="or">
-			<FileCreate onmatch="exclude">
-			</FileCreate>
-		</RuleGroup>
-	</EventFiltering>
-</Sysmon>
